@@ -77,7 +77,7 @@ public class ControlFlowExercises {
         System.out.println("------ | ------- | -----");
         for (int i = 1; i <= number; i += 1 ) {
             System.out.printf("%-6d | %-7d | %-5d%n", i, (int) Math.pow(i, 2), (int) Math.pow(i, 3));
-
+        }
 
         // ================ Convert given number grades into letter grades.
 
