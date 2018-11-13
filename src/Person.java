@@ -36,8 +36,8 @@ public class Person {
 //        Person person1 = new Person("John");
 //        System.out.println(person1.getName());
 
-        String uppercaseName = Person.formatName("asdfasdf");
-        System.out.println(uppercaseName);
+//        String uppercaseName = Person.formatName("asdfasdf");
+//        System.out.println(uppercaseName);
 
 
 //        Person person2 = person1;
