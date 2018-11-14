@@ -19,7 +19,7 @@ public class Input {
         return (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes"));
     }
 
-    int getInt() {
+    public int getInt() {
         if (!scanner.hasNextInt()) {
             System.out.println("Not valid integer. Try again.");
             scanner.nextLine();
@@ -29,7 +29,7 @@ public class Input {
         }
     }
 
-    int getInt(int min, int max) {
+    public int getInt(int min, int max) {
         int userInt = getInt();
         if (userInt >= min && userInt <= max) {
             return userInt;
