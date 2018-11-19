@@ -13,8 +13,8 @@ public class GradesApplication {
 
     public static void init() {
         Map<String, Student> students = getStudents();
-        System.out.println("Welcome!");
         Input in = new Input(new Scanner(System.in));
+        System.out.println("Welcome!");
         do {
             processInteraction(students, in);
             System.out.println();
