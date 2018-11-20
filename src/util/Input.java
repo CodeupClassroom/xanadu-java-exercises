@@ -20,13 +20,14 @@ public class Input {
     }
 
     public int getInt() {
-        if (!scanner.hasNextInt()) {
-            System.out.println("Not valid integer. Try again.");
-            scanner.nextLine();
+        int output;
+        try {
+            output = Integer.valueOf(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid integer. Please try again.");
             return getInt();
-        } else {
-            return scanner.nextInt();
         }
+        return output;
     }
 
     public int getInt(int min, int max) {
@@ -40,13 +41,14 @@ public class Input {
     }
 
     public double getDouble() {
-        if (!scanner.hasNextDouble()) {
-            System.out.println("Not valid integer. Try again.");
-            scanner.nextLine();
+        double output;
+        try {
+            output = Double.valueOf(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid integer. Please try again.");
             return getDouble();
-        } else {
-            return scanner.nextDouble();
         }
+        return output;
     }
 
     public double getDouble(int min, int max) {
@@ -60,7 +62,35 @@ public class Input {
     }
 
 
+    public int getBinary() {
+        int output;
+        try {
+            output = Integer.valueOf(getString(), 2);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid binary number. Please try again.");
+            return getBinary();
+        }
+        return output;
+    }
 
+    public int getHex() {
+        int output;
+        try {
+            output = Integer.valueOf(getString(), 16);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid hexadecimal number. Please try again.");
+            return getHex();
+        }
+        return output;
+    }
+
+    public static void main(String[] args) {
+        Input in = new Input(new Scanner(System.in));
+        System.out.println("Please enter a number: ");
+        int userInt = in.getHex();
+        System.out.println(userInt);
+
+    }
 
 
 }
